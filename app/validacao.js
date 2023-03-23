@@ -1,5 +1,25 @@
  function verificaSeOChutePossuiUmValorValido(chute){
     const numero =+ chute
+    if (chuteForInvalido(numero)) {
+        if (chute.toUpperCase() === "GAME OVER") {
+
+            document.body.innerHTML =
+                `
+                <h2>Game Over!!!</h2>
+                <h3>Pressione o botão para jogar novamente</h3>
+                <button id="jogar-novamente" class="btn-jogar">JOGAR NOVAMENTE</button>
+                `
+                document.body.style.backgroundColor = "#DF2E38";
+                document.body.style.backgroundImage =  "url(gameOver.png)";
+                document.body.style.backgroundRepeat = "no-repeat";
+                document.body.style.backgroundPosition = "center";
+
+        } else {
+
+            elementoChute.innerHTML += '<div>Valor Inválido</div>';
+        }
+    }
+
 
 
   if(chuteForInvalido(numero)){
